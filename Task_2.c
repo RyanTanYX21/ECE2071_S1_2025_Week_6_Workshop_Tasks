@@ -99,8 +99,8 @@ void delete_tree(struct node** treePtr)
 {
 	if (*treePtr!=NULL){
 		delete_tree(&((*treePtr)->leftPtr)); //look left
-		delete_tree(&((*treePtr)->rightPtr)); //look right 
-		(*treePtr)=NULL;
+		delete_tree(&((*treePtr)->rightPtr)); //look right
 		free(*treePtr); //visit
+		(*treePtr)=NULL;
 	}
 }
